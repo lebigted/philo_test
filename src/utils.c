@@ -6,21 +6,19 @@
 /*   By: ltestard <ltestard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 09:50:15 by ltestard          #+#    #+#             */
-/*   Updated: 2023/11/10 12:28:53 by ltestard         ###   ########.fr       */
+/*   Updated: 2023/11/10 19:33:08 by ltestard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/philosophers.h"
 
-void	ft_usleep(int dure)
+void    ft_usleep(int ms)
 {
-	int	start_time;
-	int	end_time;
+    long int    time;
 
-	start_time = get_current_time();
-	end_time = start_time + dure;
-	while (get_current_time() < end_time)
-		usleep(500);
+    time = get_current_time();
+    while (get_current_time() - time < ms)
+        usleep(ms / 10);
 }
 
 void	ft_putstr(char *s)

@@ -6,7 +6,7 @@
 /*   By: ltestard <ltestard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 11:30:34 by ltestard          #+#    #+#             */
-/*   Updated: 2023/11/10 12:09:58 by ltestard         ###   ########.fr       */
+/*   Updated: 2023/11/10 19:32:01 by ltestard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*philosopher_routine(void *arg)
 	philo = (t_philosopher *)arg;
 	while (1)
 	{
+		if(philo->sim->all_philosophers_have_eaten)
+			break ;
 		if (think(philo))
 			break ;
 		else if (eat(philo))
@@ -47,6 +49,8 @@ void	*monitor_check(void *arg)
 	philo = (t_philosopher *)arg;
 	while (1)
 	{
+		if (philo->sim->all_philosophers_have_eaten)
+			break ;
 		pthread_mutex_lock(&philo->sim->death_mutex);
 		if (philo->sim->philo_is_dead >= 1)
 		{
@@ -62,7 +66,6 @@ void	*monitor_check(void *arg)
 			pthread_mutex_unlock(&philo->sim->mutex_last_meal);
 			return (NULL);
 		}
-		ft_usleep(100);
 	}
 	return (NULL);
 }

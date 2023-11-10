@@ -6,11 +6,11 @@
 #    By: ltestard <ltestard@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/19 09:13:24 by ltestard          #+#    #+#              #
-#    Updated: 2023/11/10 11:38:24 by ltestard         ###   ########.fr        #
+#    Updated: 2023/11/10 19:20:29 by ltestard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = philosophers
+NAME = philo
 
 CC = gcc
 

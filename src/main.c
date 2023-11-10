@@ -6,7 +6,7 @@
 /*   By: ltestard <ltestard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 09:14:10 by ltestard          #+#    #+#             */
-/*   Updated: 2023/11/10 12:51:59 by ltestard         ###   ########.fr       */
+/*   Updated: 2023/11/10 18:49:09 by ltestard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	single_philosopher_routine(t_simulation *sim)
 	usleep(sim->time_to_die);
 	printf("[%ld] 1 is dead\n", sim->time_to_die);
 	pthread_mutex_unlock(&sim->death_mutex);
-	free_resources(sim);
 }
 
 void	free_resources(t_simulation *data)

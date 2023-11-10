@@ -6,12 +6,12 @@
 /*   By: ltestard <ltestard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 09:14:06 by ltestard          #+#    #+#             */
-/*   Updated: 2023/11/10 12:36:21 by ltestard         ###   ########.fr       */
+/*   Updated: 2023/11/10 19:20:20 by ltestard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHILOSOPHERS_H
-# define PHILOSOPHERS_H
+#ifndef PHILO_H
+# define PHILO_H
 
 # define GREEN "\033[1;32m"
 # define YELLOW "\033[1;33m"
